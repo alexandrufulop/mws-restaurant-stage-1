@@ -1,0 +1,8 @@
+.idea
+*.sh
+node_modules
+build
+npm-debug.log
+pointless_change
+package-lock.json
+/docs
