@@ -1,163 +1,163 @@
-body, 
+body,
 html {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  font: 16px "Gloria Hallelujah",Arial,Helvetica,sans-serif;
-  min-width: 250px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font: 16px "Gloria Hallelujah", Arial, Helvetica, sans-serif;
+    min-width: 250px;
 }
-
 
 body,
 p,
 td,
 th {
-color:#333;
+    color: #333;
 }
 
-li,ul {
-font-size:1em;
-color:#333;
+li, ul {
+    font-size: 1em;
+    color: #333;
 }
 
 a {
-color:#ffc962;
+    color: #ffc962;
 }
 
-a,a:focus,a:hover {
-text-decoration:none
+a, a:focus, a:hover {
+    text-decoration: none
 }
 
-a:focus,a:hover {
-color:#FFC962;
+a:focus, a:hover {
+    color: #ffc962;
 }
 
 a img {
-border:0 none #fff
+    border: 0 none #fff
 }
 
-article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
-display:block
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block
 }
 
 #maincontent {
-background-color:#f3f3f3;
-min-height:100%
+    background-color: #f3f3f3;
+    min-height: 100%
 }
 
 #footer {
-font:100% Arial,Helvetica,sans-serif;
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e5e5e5+100;White+3D */
-background: rgb(255,255,255); /* Old browsers */
-background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
-color:#000;
-font-size:.8em;
-letter-spacing:1px;
-padding:25px;
-text-transform:uppercase
+    font: 100% Arial, Helvetica, sans-serif;
+    color: #000;
+    font-size: .8em;
+    letter-spacing: 1px;
+    padding: 25px;
+    text-transform: uppercase;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e5e5e5+100;White+3D */
+    background: rgb(255, 255, 255); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(229, 229, 229, 1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(229, 229, 229, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(229, 229, 229, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e5e5e5', GradientType=0); /* IE6-9 */
+    /* End gradient */
 }
 
-#footer,nav {
-text-align:center
+#footer, nav {
+    text-align: center
 }
 
-.filter-options{
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7abcff+0,60abf8+44,4096ee+100;Blue+3D+%2314 */
-background: #7abcff; /* Old browsers */
-background: -moz-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee',GradientType=0 ); /* IE6-9 */
+.filter-options {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7abcff+0,60abf8+44,4096ee+100;Blue+3D+%2314 */
+    background: #7abcff; /* Old browsers */
+    background: -moz-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #7abcff 0%, #60abf8 44%, #4096ee 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7abcff', endColorstr='#4096ee', GradientType=0); /* IE6-9 */
 }
 
-nav{
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4c4c4c+0,595959+12,666666+25,474747+39,2c2c2c+50,000000+51,111111+60,2b2b2b+76,1c1c1c+91,131313+100;Black+Gloss+%231 */
-background: #4c4c4c; /* Old browsers */
-background: -moz-linear-gradient(top, #4c4c4c 0%, #595959 12%, #666666 25%, #474747 39%, #2c2c2c 50%, #000000 51%, #111111 60%, #2b2b2b 76%, #1c1c1c 91%, #131313 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 ); /* IE6-9 */
+nav {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4c4c4c+0,595959+12,666666+25,474747+39,2c2c2c+50,000000+51,111111+60,2b2b2b+76,1c1c1c+91,131313+100;Black+Gloss+%231 */
+    background: #4c4c4c; /* Old browsers */
+    background: -moz-linear-gradient(top, #4c4c4c 0%, #595959 12%, #666 25%, #474747 39%, #2c2c2c 50%, #000 51%, #111 60%, #2b2b2b 76%, #1c1c1c 91%, #131313 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #4c4c4c 0%, #595959 12%, #666 25%, #474747 39%, #2c2c2c 50%, #000 51%, #111 60%, #2b2b2b 76%, #1c1c1c 91%, #131313 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #4c4c4c 0%, #595959 12%, #666 25%, #474747 39%, #2c2c2c 50%, #000 51%, #111 60%, #2b2b2b 76%, #1c1c1c 91%, #131313 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4c4c4c', endColorstr='#131313', GradientType=0); /* IE6-9 */
 }
 
 /* ====================== Navigation ====================== */
 
-#Logo{
-	display:none;
+#Logo {
+    display: none;
 }
 
 nav {
-position:relative;
-margin:0;
-width:100%;
-min-height: 80px;
+    position: relative;
+    margin: 0;
+    width: 100%;
+    min-height: 80px;
 }
 
-nav h1{
-margin: 0;
-margin-left: 0.3em;
-padding-top: 15px;
+nav h1 {
+    margin: 0;
+    margin-left: 0.3em;
+    padding-top: 15px;
 }
 
 /* Logo Name */
 nav h1 a {
-color:white;
-letter-spacing: 2px;
-text-transform: uppercase;
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 #breadcrumb {
-padding:10px 40px 16px;
-list-style:none;
-background-color:#eee;
-font-size:17px;
-margin:0;
-width:calc(50% - 80px)
+    padding: 10px 40px 16px;
+    list-style: none;
+    background-color: #eee;
+    font-size: 17px;
+    margin: 0;
+    width: calc(50% - 80px)
 }
 
 /* Display list items side by side */
 #breadcrumb li {
-display:inline
+    display: inline
 }
 
-#breadcrumb li+li:before {
-padding:8px;
-color:#000;
-content:"/\00a0"
+#breadcrumb li + li:before {
+    padding: 8px;
+    color: #000;
+    content: "/\00a0"
 }
 
 #breadcrumb li a {
-color:#0275d8;
-text-decoration:none
+    color: #0275d8;
+    text-decoration: none
 }
 
 #breadcrumb li a:hover {
-color:#01447e;
-text-decoration:underline
+    color: #01447e;
+    text-decoration: underline
 }
 
 /* ====================== Map ====================== */
 #map {
-height:400px;
-width:100%;
-background-color:#ccc
+    height: 400px;
+    width: 100%;
+    background-color: #ccc
 }
 
 /* ====================== Restaurant Filtering ====================== */
 
 .filter-options {
-font:100% Arial,Helvetica,sans-serif;
-width:100%;
-margin: 0 auto;
-background-color:#3397db
+    font: 100% Arial, Helvetica, sans-serif;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #3397db
 }
 
-.select-container{
-	display:inline-block;
-	margin-bottom: 1.2em;
+.select-container {
+    display: inline-block;
+    margin-bottom: 1.2em;
 }
 
 .filter-options h2 {
@@ -169,7 +169,7 @@ background-color:#3397db
 }
 
 .filter-options select {
-    background: none repeat scroll 0 0 #FFFFFF;
+    background: none repeat scroll 0 0 #fff;
     border: 1px solid #e5e5e5;
     border-radius: 5px 5px 5px 5px;
     box-shadow: 0 0 10px #e8e8e8 inset;
@@ -177,61 +177,64 @@ background-color:#3397db
     margin: 5px 0 0 25px;
     padding: 10px;
     min-width: 200px;
-	
+
 }
 
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list {
-background-color:#f3f3f3;
-list-style:outside none none;
-margin:0;
-padding:0;
-width:100%;
-display:-webkit-box;
-display:-ms-flexbox;
-display:flex;
-flex-wrap: wrap;
+    background-color: #f3f3f3;
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #restaurants-list li {
-	font: 100% Arial,Helvetica,sans-serif;
+    font: 100% Arial, Helvetica, sans-serif;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: 0.5s;
     border-radius: 18px 0 20px 0;
     background-color: #fff;
     border: 3px solid #63adf9;
     text-align: left;
-    margin: 10px;
+    margin: 10px auto;
 }
 
 #restaurants-list .restaurant-img {
-	border-radius: 14px 0 0 0;
-    box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2);
-	max-width: 100%;
+    border-radius: 14px 0 0 0;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 300px;
     -moz-transition: all 0.3s;
-	-webkit-transition: all 0.3s;
-	transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 #restaurants-list .restaurant-img:hover {
-  -moz-transform: scale(1.01);
-  -webkit-transform: scale(1.01);
-  transform: scale(1.01);
+    -moz-transform: scale(1.01);
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
 }
 
-
 #restaurants-list li h1 {
-	text-align:center;
-	color: #f18200;
-	font:100% "Gloria Hallelujah",Arial,Helvetica,sans-serif;
-	font-weight: 200;
+    text-align: center;
+    color: #f18200;
+    font: 100% "Gloria Hallelujah", Arial, Helvetica, sans-serif;
+    font-weight: 200;
     font-size: 1.8em;
     margin: 15px;
+    word-break: break-word;
+    width: 200px;
 }
 
 #restaurants-list p {
-	font-weight:bold;
-	margin: 20px;
+    font-weight: bold;
+    margin: 20px;
+    word-break: break-word;
+    width: 200px;
 }
 
 /* Todo capitalize first p
@@ -241,9 +244,8 @@ flex-wrap: wrap;
 
 */
 
-
 #restaurants-list li a {
-background-color: #FFC962;
+    background-color: #ffc962;
     border: 1px solid #eee;
     color: white;
     display: block;
@@ -258,112 +260,112 @@ background-color: #FFC962;
 }
 
 #restaurants-list li a:hover {
-		color:gray;
+    color: gray;
 }
 
 /* ====================== Restaurant Details ====================== */
 
 .inside header {
-position:fixed;
-top:0;
-width:100%;
-z-index:1
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1
 }
 
 .inside #map-container {
-background:blue none repeat scroll 0 0;
-height:87%;
-position:fixed;
-right:0;
-top:80px;
-width:50%
+    background: blue none repeat scroll 0 0;
+    height: 87%;
+    position: fixed;
+    right: 0;
+    top: 80px;
+    width: 50%
 }
 
 .inside #map {
-background-color:#ccc;
-height:100%;
-width:100%
+    background-color: #ccc;
+    height: 100%;
+    width: 100%
 }
 
 .inside #footer {
-bottom:0;
-position:absolute;
-width:50%
+    bottom: 0;
+    position: absolute;
+    width: 50%
 }
 
 #restaurant-name {
-color:#f18200;
-font-family:"Gloria Hallelujah",Arial,Helvetica,sans-serif;
-font-size:1.2em;
-font-weight:200;
-letter-spacing:0;
-margin:15px 0 30px;
-text-transform:uppercase;
-line-height:1.1
+    color: #f18200;
+    font-family: "Gloria Hallelujah", Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    font-weight: 200;
+    letter-spacing: 0;
+    margin: 15px 0 30px;
+    text-transform: uppercase;
+    line-height: 1.1
 }
 
 #restaurant-img {
-width:90%
+    width: 90%
 }
 
 #restaurant-address {
-font-size:1.2em;
-margin:10px 0
+    font-size: 1.2em;
+    margin: 10px 0
 }
 
 #restaurant-cuisine {
-background-color:#333;
-color:#ddd;
-font-size:1.2em;
-font-weight:300;
-letter-spacing:10px;
-margin:0 0 20px;
-padding:2px 0;
-text-align:center;
-text-transform:uppercase;
-width:90%
+    background-color: #333;
+    color: #ddd;
+    font-size: 1.2em;
+    font-weight: 300;
+    letter-spacing: 10px;
+    margin: 0 0 20px;
+    padding: 2px 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 90%
 }
 
-#restaurant-container,#reviews-container {
-border-bottom:1px solid #d9d9d9;
-border-top:1px solid #fff;
-padding:140px 40px 30px;
-width:50%
+#restaurant-container, #reviews-container {
+    border-bottom: 1px solid #d9d9d9;
+    border-top: 1px solid #fff;
+    padding: 140px 40px 30px;
+    width: 50%
 }
 
 #reviews-container {
-padding:30px 40px 80px
+    padding: 30px 40px 80px
 }
 
 #reviews-container h2 {
-color:#f58500;
-font-size:2em;
-font-weight:300;
-letter-spacing:-1px;
-padding-bottom:10px
+    color: #f58500;
+    font-size: 2em;
+    font-weight: 300;
+    letter-spacing: -1px;
+    padding-bottom: 10px
 }
 
 #reviews-list {
-margin:0;
-padding:0
+    margin: 0;
+    padding: 0
 }
 
 #reviews-list li {
-background-color:#fff;
-border:2px solid #f3f3f3;
-display:block;
-list-style-type:none;
-margin:0 0 30px;
-overflow:hidden;
-padding:0 20px 20px;
-position:relative;
-width:85%
+    background-color: #fff;
+    border: 2px solid #f3f3f3;
+    display: block;
+    list-style-type: none;
+    margin: 0 0 30px;
+    overflow: hidden;
+    padding: 0 20px 20px;
+    position: relative;
+    width: 85%
 }
 
 #reviews-list li p {
-margin:0 0 10px
+    margin: 0 0 10px
 }
 
 #restaurant-hours td {
-color:#666
+    color: #666
 }

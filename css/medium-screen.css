@@ -1,19 +1,19 @@
-nav h1{
-	width: 100%;
+nav h1 {
+    width: 100%;
 }
 
-nav h1 a{
-font-size:19px;	
+nav h1 a {
+    font-size: 19px;
 }
 
-#Logo{
-float: left;
-display: inline-block;
-width: 50px;
+#Logo {
+    float: left;
+    display: inline-block;
+    width: 50px;
 }
 
 #restaurants-list li h1 {
-    min-height: 100px;
+    min-height: 115px;
 }
 
 

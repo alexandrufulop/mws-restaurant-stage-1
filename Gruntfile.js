@@ -21,7 +21,7 @@ module.exports = function(grunt) {
     },
     dist: {
       src: 'css/src/*.css', //we pack all our css in one file
-	  dest: 'css/styles.min.css',
+	  dest: 'css/styles.min.css'
     }
   },
     responsive_images: {
@@ -42,7 +42,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           src: ['*.{gif,jpg,png}'],
-          cwd: 'img-src/',
+          cwd: 'img_src/',
           dest: 'img/'
         }]
       }
@@ -51,38 +51,37 @@ module.exports = function(grunt) {
     /* Clear out the images directory if it exists */
     clean: {
       dev: {
-        src: ['images'],
-      },
+        src: ['img']
+      }
     },
 
     /* Generate the images directory if it is missing */
     mkdir: {
       dev: {
         options: {
-          create: ['images']
-        },
-      },
+          create: ['img']
+        }
+      }
     },
 
-    /* Copy the "fixed" images that don't go through processing into the images/directory 
+    /* Copy the "fixed" images that don't go through processing into the images/directory */
     copy: {
       dev: {
         files: [{
           expand: true,
-          src: ['images_src/fixed/*.{gif,jpg,png}'],
-          dest: 'images/',
-          flatten: true,
+          src: ['img_src/*.{gif,jpg,png}'],
+          dest: 'img/',
+          flatten: true
         }]
-      },
-    },
-*/
+      }
+    }
   });
 
   grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-responsive-images');
   grunt.loadNpmTasks('grunt-contrib-clean');
-  //grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-mkdir');
-  grunt.registerTask('default', ['postcss','clean', 'mkdir', 'responsive_images']);
+  grunt.registerTask('default', ['clean', 'postcss', 'copy', 'mkdir', 'responsive_images']);
 
 };
