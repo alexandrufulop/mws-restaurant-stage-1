@@ -21,7 +21,7 @@ li, ul {
 }
 
 a {
-    color: #ffc962;
+    color: #FA892D;
 }
 
 a, a:focus, a:hover {
@@ -152,7 +152,7 @@ nav h1 a {
     font: 100% Arial, Helvetica, sans-serif;
     width: 100%;
     margin: 0 auto;
-    background-color: #3397db
+    background-color: #336edb;
 }
 
 .select-container {
@@ -199,7 +199,7 @@ nav h1 a {
     transition: 0.5s;
     border-radius: 18px 0 20px 0;
     background-color: #fff;
-    border: 3px solid #63adf9;
+    border: 3px solid #336edb;
     text-align: left;
     margin: 10px auto;
 }
@@ -221,7 +221,7 @@ nav h1 a {
 
 #restaurants-list li h1 {
     text-align: center;
-    color: #f18200;
+    color: #336edb;
     font: 100% "Gloria Hallelujah", Arial, Helvetica, sans-serif;
     font-weight: 200;
     font-size: 1.8em;
@@ -237,17 +237,10 @@ nav h1 a {
     width: 200px;
 }
 
-/* Todo capitalize first p
-#restaurants-list li p:nth-child(1) {
-    text-transform: capitalize;
-}
-
-*/
-
 #restaurants-list li a {
-    background-color: #ffc962;
+    background-color: #FA892D;
     border: 1px solid #eee;
-    color: white;
+    color: #000;
     display: block;
     margin: auto auto 20px auto;
     text-align: center;
@@ -260,7 +253,7 @@ nav h1 a {
 }
 
 #restaurants-list li a:hover {
-    color: gray;
+    color: #fff;
 }
 
 /* ====================== Restaurant Details ====================== */
