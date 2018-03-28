@@ -11,17 +11,15 @@ html {
 body,
 p,
 td,
-th {
-    color: #333;
-}
+th {  }
 
 li, ul {
-    font-size: 1em;
-    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 a {
-    color: #FA892D;
+    color: #fa892d;
 }
 
 a, a:focus, a:hover {
@@ -33,24 +31,34 @@ a:focus, a:hover {
 }
 
 a img {
-    border: 0 none #fff
+    border: 0 none #fff;
 }
 
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-    display: block
+    display: block;
+}
+
+section{
+    width:100%;
 }
 
 #maincontent {
     background-color: #f3f3f3;
-    min-height: 100%
+    min-height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #footer {
     font: 100% Arial, Helvetica, sans-serif;
     color: #000;
     font-size: .8em;
-    letter-spacing: 1px;
-    padding: 25px;
+    letter-spacing: .1em;
+    padding: 1.2em;
     text-transform: uppercase;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e5e5e5+100;White+3D */
     background: rgb(255, 255, 255); /* Old browsers */
@@ -62,7 +70,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 }
 
 #footer, nav {
-    text-align: center
+    text-align: center;
 }
 
 .filter-options {
@@ -85,6 +93,34 @@ nav {
 
 /* ====================== Navigation ====================== */
 
+/* a11y skip link */
+a.skip-main {
+    left: -999px;
+    position: absolute;
+    top: auto;
+    width: .1em;
+    height: .1em;
+    overflow: hidden;
+    z-index: -999;
+}
+
+a.skip-main:focus, a.skip-main:active {
+    color: #fff;
+    background-color: #000;
+    left: auto;
+    top: auto;
+    width: 30%;
+    height: auto;
+    overflow: auto;
+    margin: .1em 35%;
+    padding: .5em;
+    border-radius: 1em;
+    border: .4em solid yellow;
+    text-align: center;
+    font-size: 1.2em;
+    z-index: 999;
+}
+
 #Logo {
     display: none;
 }
@@ -99,23 +135,22 @@ nav {
 nav h1 {
     margin: 0;
     margin-left: 0.3em;
-    padding-top: 15px;
+    padding-top: 1em;
 }
 
 /* Logo Name */
 nav h1 a {
     color: white;
-    letter-spacing: 2px;
+    letter-spacing: .2em;
     text-transform: uppercase;
 }
 
 #breadcrumb {
-    padding: 10px 40px 16px;
+    padding: .1em;
     list-style: none;
     background-color: #eee;
-    font-size: 17px;
+    font-size: 1em;
     margin: 0;
-    width: calc(50% - 80px)
 }
 
 /* Display list items side by side */
@@ -124,14 +159,15 @@ nav h1 a {
 }
 
 #breadcrumb li + li:before {
-    padding: 8px;
+    padding: .8em;
     color: #000;
     content: "/\00a0"
 }
 
 #breadcrumb li a {
     color: #0275d8;
-    text-decoration: none
+    text-decoration: none;
+    margin: 1em;
 }
 
 #breadcrumb li a:hover {
@@ -165,17 +201,17 @@ nav h1 a {
     display: inline-block;
     color: #fff;
     font-weight: normal;
-    letter-spacing: 1px;
+    letter-spacing: .1em;
 }
 
 .filter-options select {
     background: none repeat scroll 0 0 #fff;
-    border: 1px solid #e5e5e5;
-    border-radius: 5px 5px 5px 5px;
-    box-shadow: 0 0 10px #e8e8e8 inset;
-    height: 40px;
-    margin: 5px 0 0 25px;
-    padding: 10px;
+    border: .1em solid #e5e5e5;
+    border-radius: .5em;
+    box-shadow: 0 0 0.5em #e8e8e8 inset;
+    height: 3em;
+    margin: .5em 0 0 1.4em;
+    padding: .8em;
     min-width: 200px;
 
 }
@@ -195,18 +231,17 @@ nav h1 a {
 
 #restaurants-list li {
     font: 100% Arial, Helvetica, sans-serif;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 .8em .8em 0 rgba(0, 0, 0, 0.2), 0 .6em .8em 0 rgba(0, 0, 0, 0.19);
     transition: 0.5s;
-    border-radius: 18px 0 20px 0;
+    border-radius: .8em 0 1em 0;
     background-color: #fff;
-    border: 3px solid #336edb;
     text-align: left;
-    margin: 10px auto;
+    margin: 1em auto;
 }
 
 #restaurants-list .restaurant-img {
-    border-radius: 14px 0 0 0;
-    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 1em 0 0 0;
+    box-shadow: 0 .8em .8em 0 rgba(0, 0, 0, 0.2);
     width: 300px;
     -moz-transition: all 0.3s;
     -webkit-transition: all 0.3s;
@@ -225,30 +260,29 @@ nav h1 a {
     font: 100% "Gloria Hallelujah", Arial, Helvetica, sans-serif;
     font-weight: 200;
     font-size: 1.8em;
-    margin: 15px;
+    margin: .8em;
     word-break: break-word;
     width: 200px;
 }
 
 #restaurants-list p {
     font-weight: bold;
-    margin: 20px;
+    margin: 1.2em;
     word-break: break-word;
     width: 200px;
 }
 
 #restaurants-list li a {
-    background-color: #FA892D;
-    border: 1px solid #eee;
+    background-color: #fa892d;
+    border: .2em solid #eee;
     color: #000;
     display: block;
-    margin: auto auto 20px auto;
+    margin: auto auto 1em auto;
     text-align: center;
     text-decoration: none;
-    width: 10em;
-    height: 50px;
-    line-height: 50px;
-    border-radius: 8px 0 8px 0;
+    height: 2.5em;
+    line-height: 2.5em;
+    border-radius: .8em 0 .8em 0;
     width: 80%;
 }
 
@@ -258,107 +292,98 @@ nav h1 a {
 
 /* ====================== Restaurant Details ====================== */
 
+.inside section {
+}
+
 .inside header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1
+
 }
 
 .inside #map-container {
-    background: blue none repeat scroll 0 0;
-    height: 87%;
-    position: fixed;
-    right: 0;
-    top: 80px;
-    width: 50%
+    position: relative;
+    width: 100%;
 }
+
 
 .inside #map {
     background-color: #ccc;
     height: 100%;
-    width: 100%
+    width: 100%;
+}
+
+.inside #restaurant-hours{
+    background-color: #fff;
+    border-radius: 0 0 1em 0;
+    box-shadow: 0 1em 1em 0 rgba(0, 0, 0, 0.2);
+    border:none;
+    width:100%;
+}
+
+.inside #restaurant-address{
+    border-radius: 1em 0 0 0;
+    box-shadow: 0 1em 1em 0 rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    text-align: center;
+    margin-bottom: .1em;
 }
 
 .inside #footer {
     bottom: 0;
-    position: absolute;
-    width: 50%
+    position: relative;
 }
 
-#restaurant-name {
+#restaurant-name,
+#reviews-container h2{
     color: #f18200;
-    font-family: "Gloria Hallelujah", Arial, Helvetica, sans-serif;
-    font-size: 1.2em;
-    font-weight: 200;
-    letter-spacing: 0;
-    margin: 15px 0 30px;
-    text-transform: uppercase;
-    line-height: 1.1
+    font-size: 1.5em;
+    text-align: center;
 }
 
 #restaurant-img {
-    width: 90%
-}
-
-#restaurant-address {
-    font-size: 1.2em;
-    margin: 10px 0
+    width: 100%;
+    border-radius: 1em 1em 0 0;
+    box-shadow: 0 1em 1em 0 rgba(0, 0, 0, 0.2);
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 #restaurant-cuisine {
     background-color: #333;
-    color: #ddd;
+    color: #fff;
     font-size: 1.2em;
     font-weight: 300;
-    letter-spacing: 10px;
-    margin: 0 0 20px;
-    padding: 2px 0;
+    letter-spacing: .4em;
+    margin: 0 auto;
+    padding: 1em 0;
     text-align: center;
     text-transform: uppercase;
-    width: 90%
 }
 
 #restaurant-container, #reviews-container {
-    border-bottom: 1px solid #d9d9d9;
-    border-top: 1px solid #fff;
-    padding: 140px 40px 30px;
-    width: 50%
+    width: calc(100% - 1.5em);
+    margin: 0 auto;
 }
 
 #reviews-container {
-    padding: 30px 40px 80px
-}
-
-#reviews-container h2 {
-    color: #f58500;
-    font-size: 2em;
-    font-weight: 300;
-    letter-spacing: -1px;
-    padding-bottom: 10px
 }
 
 #reviews-list {
-    margin: 0;
-    padding: 0
+
 }
 
 #reviews-list li {
-    background-color: #fff;
-    border: 2px solid #f3f3f3;
-    display: block;
     list-style-type: none;
-    margin: 0 0 30px;
-    overflow: hidden;
-    padding: 0 20px 20px;
-    position: relative;
-    width: 85%
+    background-color: #fff;
+    border-radius: 1em 0 1em 0;
+    box-shadow: 0 .8em .8em 0 rgba(0, 0, 0, 0.2);
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-bottom: 1.5em;
 }
 
 #reviews-list li p {
-    margin: 0 0 10px
+    margin: .8em;
 }
 
-#restaurant-hours td {
-    color: #666
-}

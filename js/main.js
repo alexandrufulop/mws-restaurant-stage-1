@@ -80,6 +80,7 @@ window.initMap = () => {
         center: loc,
         scrollwheel: false
     });
+
     updateRestaurants();
 };
 
@@ -176,24 +177,19 @@ createRestaurantHTML = (restaurant) => {
         image.alt = imageAlt;
 
         /* !!! Important !!!
-        if we have an alt text to the image it means that a screen reader would repeat the same
+        if we have an alt text set to the image, it means that a screen reader would repeat the same
         information regarding the selected restaurant (the name and the city).
-        To overcome this we aria-hide the h1 and p data below
+        To overcome this we are using aria-hide on h1 and p elements
         */
         name.setAttribute("aria-hidden","true");
         neighborhood.setAttribute("aria-hidden","true");
     }
-
-    //a11y - Better expressing what this button is about
-    more.setAttribute("aria-label", "Restaurant details");
 
     /**
      * a11y
      * Making the Restaurant name audible and focusable
      */
     li.setAttribute("tabindex","0");
-
-
 
     /**
      * Appending elements to the page
