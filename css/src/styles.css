@@ -4,14 +4,15 @@ html {
     padding: 0;
     width: 100%;
     height: 100%;
-    font: 16px "Gloria Hallelujah", Arial, Helvetica, sans-serif;
+    font: 16px "Raleway", Arial, Helvetica, sans-serif;
     min-width: 250px;
 }
 
 body,
 p,
 td,
-th {  }
+th {
+}
 
 li, ul {
     margin: 0;
@@ -38,12 +39,12 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
     display: block;
 }
 
-section{
-    width:100%;
+section {
+    width: 100%;
 }
 
 #maincontent {
-    background-color: #f3f3f3;
+    background: #f3f3f3;
     min-height: 100%;
     width: 100%;
     margin: 0 auto;
@@ -54,10 +55,11 @@ section{
 }
 
 #footer {
+    position: relative;
+    margin: 1em auto;
     font: 100% Arial, Helvetica, sans-serif;
     color: #000;
     font-size: .8em;
-    letter-spacing: .1em;
     padding: 1.2em;
     text-transform: uppercase;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e5e5e5+100;White+3D */
@@ -106,7 +108,7 @@ a.skip-main {
 
 a.skip-main:focus, a.skip-main:active {
     color: #fff;
-    background-color: #000;
+    background: #000;
     left: auto;
     top: auto;
     width: 30%;
@@ -146,9 +148,9 @@ nav h1 a {
 }
 
 #breadcrumb {
-    padding: .1em;
+    line-height: 3em;
     list-style: none;
-    background-color: #eee;
+    background: #eee;
     font-size: 1em;
     margin: 0;
 }
@@ -179,7 +181,7 @@ nav h1 a {
 #map {
     height: 400px;
     width: 100%;
-    background-color: #ccc
+    background: #ccc
 }
 
 /* ====================== Restaurant Filtering ====================== */
@@ -188,7 +190,7 @@ nav h1 a {
     font: 100% Arial, Helvetica, sans-serif;
     width: 100%;
     margin: 0 auto;
-    background-color: #336edb;
+    background: #336edb;
 }
 
 .select-container {
@@ -218,7 +220,7 @@ nav h1 a {
 
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list {
-    background-color: #f3f3f3;
+    background: #f3f3f3;
     list-style: outside none none;
     margin: 0;
     padding: 0;
@@ -234,7 +236,7 @@ nav h1 a {
     box-shadow: 0 .8em .8em 0 rgba(0, 0, 0, 0.2), 0 .6em .8em 0 rgba(0, 0, 0, 0.19);
     transition: 0.5s;
     border-radius: .8em 0 1em 0;
-    background-color: #fff;
+    background: #fff;
     text-align: left;
     margin: 1em auto;
 }
@@ -257,10 +259,9 @@ nav h1 a {
 #restaurants-list li h1 {
     text-align: center;
     color: #336edb;
-    font: 100% "Gloria Hallelujah", Arial, Helvetica, sans-serif;
     font-weight: 200;
-    font-size: 1.8em;
-    margin: .8em;
+    font-size: 1.6em;
+    margin: 1em auto;
     word-break: break-word;
     width: 200px;
 }
@@ -273,7 +274,7 @@ nav h1 a {
 }
 
 #restaurants-list li a {
-    background-color: #fa892d;
+    background: #fa892d;
     border: .2em solid #eee;
     color: #000;
     display: block;
@@ -296,50 +297,53 @@ nav h1 a {
 }
 
 .inside header {
-
 }
 
 .inside #map-container {
+    background: #fff;
     position: relative;
     width: 100%;
+    min-width: 250px;
+    min-height: 300px;
 }
 
-
 .inside #map {
-    background-color: #ccc;
+    background: #ccc;
     height: 100%;
     width: 100%;
 }
 
-.inside #restaurant-hours{
-    background-color: #fff;
+.inside #restaurant-hours {
+    background: #fff;
     border-radius: 0 0 1em 0;
     box-shadow: 0 1em 1em 0 rgba(0, 0, 0, 0.2);
-    border:none;
-    width:100%;
+    border: none;
+    width: 100%;
+    padding: 1em;
+    text-align: center;
 }
 
-.inside #restaurant-address{
-    border-radius: 1em 0 0 0;
+.inside #restaurant-address {
     box-shadow: 0 1em 1em 0 rgba(0, 0, 0, 0.2);
-    background-color: #fff;
+    background: #fff;
     text-align: center;
-    margin-bottom: .1em;
+    margin: 0;
+    padding: 1em;
 }
 
 .inside #footer {
-    bottom: 0;
-    position: relative;
+
 }
 
 #restaurant-name,
-#reviews-container h2{
+#reviews-container h2 {
     color: #f18200;
     font-size: 1.5em;
     text-align: center;
 }
 
 #restaurant-img {
+    margin-bottom: 1em;
     width: 100%;
     border-radius: 1em 1em 0 0;
     box-shadow: 0 1em 1em 0 rgba(0, 0, 0, 0.2);
@@ -349,20 +353,21 @@ nav h1 a {
 }
 
 #restaurant-cuisine {
-    background-color: #333;
+    margin: 0 auto;
+    border-radius: 1em 0 0 0;
+    background: #333;
     color: #fff;
     font-size: 1.2em;
     font-weight: 300;
     letter-spacing: .4em;
-    margin: 0 auto;
-    padding: 1em 0;
+    padding: .7em 0;
     text-align: center;
     text-transform: uppercase;
 }
 
 #restaurant-container, #reviews-container {
     width: calc(100% - 1.5em);
-    margin: 0 auto;
+    margin: 1em auto;
 }
 
 #reviews-container {
@@ -374,7 +379,7 @@ nav h1 a {
 
 #reviews-list li {
     list-style-type: none;
-    background-color: #fff;
+    background: #fff;
     border-radius: 1em 0 1em 0;
     box-shadow: 0 .8em .8em 0 rgba(0, 0, 0, 0.2);
     -moz-transition: all 0.3s;
@@ -383,7 +388,55 @@ nav h1 a {
     margin-bottom: 1.5em;
 }
 
+/* Tweaking restaurant reviews to look as in spec */
 #reviews-list li p {
-    margin: .8em;
+    padding: 1em;
+    text-align: justify;
+    font-style: italic;
+}
+
+/* Reviewer name */
+#reviews-list li p:nth-of-type(1) {
+    text-align: left;
+    width: calc(25% - 1em);
+    border-radius: 1em 0 0 0;
+    background: #333;
+    color: #fff;
+    float: left;
+    line-height: 3em;
+    margin: 0;
+    padding: 0 0 0 1em;
+    letter-spacing: .2em;
+    font-weight: bold;
+}
+
+/* Review date */
+#reviews-list li p:nth-of-type(2) {
+    text-align: right;
+    width: calc(75% - 1em);
+    font-style: italic;
+    color: #fff;
+    float: right;
+    background: #333;
+    line-height: 3em;
+    margin: 0;
+    padding: 0 1em 0 0;
+}
+
+/* Reviewe rating */
+#reviews-list li p:nth-of-type(3) {
+    color:#fff;
+    display: inline-block;
+    width: 10em;
+    background: #f18200;
+    border-radius: .4em;
+    box-shadow: 0 0.4em 0.4em 0 rgba(0, 0, 0, 0.2);
+    padding: 0 1em 0 0;
+    margin: 1em 0 0 1em;
+    line-height: 2em;
+    text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
