@@ -143,7 +143,7 @@ createRestaurantHTML = (restaurant) => {
      * a11y
      * Setting aria role attribute to the list element
      */
-    li.setAttribute("role","listitem");
+    li.setAttribute("role", "listitem");
 
     const image = document.createElement('img');
     image.className = 'restaurant-img';

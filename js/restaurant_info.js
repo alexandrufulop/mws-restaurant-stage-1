@@ -54,6 +54,13 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
     name.innerHTML = restaurant.name;
 
     const address = document.getElementById('restaurant-address');
+
+    /**
+     * a11y
+     * Restaurant address
+     */
+    address.setAttribute("aria-label", 'Restaurant address: ' + restaurant.address);
+
     address.innerHTML = restaurant.address;
 
     const image = document.getElementById('restaurant-img');
@@ -67,6 +74,12 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
     }
 
     const cuisine = document.getElementById('restaurant-cuisine');
+    /**
+     * a11y
+     * Restaurant cuisine type - made clear
+     */
+    cuisine.setAttribute("aria-label", restaurant.cuisine_type + ' cuisine');
+
     cuisine.innerHTML = restaurant.cuisine_type;
 
     // fill operating hours
@@ -82,8 +95,15 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
  */
 fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => {
     const hours = document.getElementById('restaurant-hours');
+
     for (let key in operatingHours) {
         const row = document.createElement('tr');
+
+        /**
+         * a11y
+         * Allow tabbing through the opening hours
+         */
+        row.setAttribute("tabindex", "0");
 
         const day = document.createElement('td');
         day.innerHTML = key;
@@ -104,6 +124,13 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
     const container = document.getElementById('reviews-container');
     const title = document.createElement('h2');
     title.innerHTML = 'Reviews';
+
+    /**
+     * a11y
+     * Allow tabbing to the Reviews section
+     */
+    title.setAttribute("tabindex", "0");
+
     container.appendChild(title);
 
     if (!reviews) {
@@ -128,17 +155,47 @@ createReviewHTML = (review) => {
     name.innerHTML = review.name;
     li.appendChild(name);
 
+    /**
+     * a11y
+     * Reviewer's name
+     */
+    name.setAttribute("aria-label", `Reviewer's name: ${review.name}.`);
+
     const date = document.createElement('p');
     date.innerHTML = review.date;
     li.appendChild(date);
+
+    /**
+     * a11y
+     * Reviews date
+     */
+    date.setAttribute("aria-label", `Review date: ${review.date}.`);
 
     const rating = document.createElement('p');
     rating.innerHTML = `Rating: ${review.rating}`;
     li.appendChild(rating);
 
+    /**
+     * a11y
+     * Help in understanding the rating
+     */
+    rating.setAttribute("aria-label", `Overall rating: ${review.rating} out of 5 points.`);
+
     const comments = document.createElement('p');
     comments.innerHTML = review.comments;
     li.appendChild(comments);
+
+    /**
+     * a11y
+     * Setting aria role attribute to the list element
+     */
+    li.setAttribute("aria-role", "tab");
+
+    /**
+     * a11y
+     * We want to allow the user to tab through the different reviews of the restaurant
+     */
+    li.setAttribute("tabindex", "0");
 
     return li;
 };
@@ -150,6 +207,13 @@ fillBreadcrumb = (restaurant = self.restaurant) => {
     const breadcrumb = document.getElementById('breadcrumb');
     const li = document.createElement('li');
     li.innerHTML = restaurant.name;
+
+    /**
+     * a11y
+     * Adding title to breadcrumb
+     */
+    li.setAttribute("title", restaurant.name);
+
     breadcrumb.appendChild(li);
 };
 

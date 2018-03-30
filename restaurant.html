@@ -19,13 +19,12 @@
     <title>Restaurant Info</title>
 </head>
 <body class="inside">
-  <!-- Beginning header -->
-  <header>
+<!-- Beginning header -->
+<header>
     <!-- Beginning nav -->
     <nav>
         <h1>
-            <a class="skip-main" href="#restaurant-container" title="Skip to main content">Skip to main content</a>
-            <a href="/">
+            <a href="/" title="Homepage">
                 <svg id="Logo" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
                      viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
                      <path style="fill:#55d4be;" d="M148.754,344.012H85.185c-11.702,0-21.19-9.487-21.19-21.19V149.194
@@ -79,52 +78,54 @@
                 Restaurant Reviews
             </a>
         </h1>
+        <a class="skip-main" href="#restaurant-container" title="Skip to main content">Skip to main content</a>
     </nav>
     <!-- Beginning breadcrumb -->
-    <ul id="breadcrumb" >
-      <li><a href="/">Home</a></li>
+    <ul id="breadcrumb" aria-label="Breadcrumb">
+        <li><a href="/" title="Homepage">Home</a></li>
     </ul>
     <!-- End breadcrumb -->
     <!-- End nav -->
-  </header>
-  <!-- End header -->
+</header>
+<!-- End header -->
 
-  <!-- Beginning main -->
-  <main id="maincontent">
-      <!-- Beginning map -->
-      <section id="map-container">
-          <div id="map"></div>
-      </section>
-      <!-- End map -->
+<!-- Beginning main -->
+<main id="maincontent" role="main">
+    <!-- Beginning map -->
+    <section id="map-container" tabindex="-1" aria-hidden="true">
+        <div id="map" tabindex="-1" aria-hidden="true"></div>
+    </section>
+    <!-- End map -->
     <!-- Beginning restaurant -->
-    <section id="restaurant-container" aria-labelledby="restaurant-name">
-      <h1 id="restaurant-name"></h1>
-      <img id="restaurant-img">
-      <p id="restaurant-cuisine" tabindex="0"></p>
-      <p id="restaurant-address" tabindex="0"></p>
-      <table id="restaurant-hours" tabindex="0"></table>
+    <section id="restaurant-container" role="region" aria-label="Restaurant details">
+        <h1 id="restaurant-name" aria-roledescription="Restaurant name"></h1>
+        <img role="img" id="restaurant-img">
+        <p id="restaurant-cuisine" tabindex="0"></p>
+        <p id="restaurant-address" tabindex="0"></p>
+        <table id="restaurant-hours" tabindex="0" aria-label="Opening hours"></table>
     </section>
     <!-- end restaurant -->
     <!-- Beginning reviews -->
-    <section id="reviews-container" tabindex="0">
-      <ul id="reviews-list"></ul>
+    <section id="reviews-container" role="region">
+        <ul id="reviews-list" role="tablist" aria-roledescription="Customer reviews"></ul>
     </section>
     <!-- End reviews -->
-  </main>
-  <!-- End main -->
-  <!-- Beginning footer -->
-  <footer id="footer">
-      Copyright (c) 2018 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
-  </footer>
-  <!-- End footer -->
-  <!-- Beginning scripts -->
-  <!-- Database helpers -->
-  <script type="text/javascript" src="js/dbhelper.js"></script>
-  <!-- Main javascript file -->
-  <script type="text/javascript" src="js/restaurant_info.js"></script>
-  <!-- Google Maps -->
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDz9jb0dWCRZg-4MhD9adsvD1uHKBb82_c&libraries=places&callback=initMap"></script>
-  <!-- End scripts -->
+</main>
+<!-- End main -->
+<!-- Beginning footer -->
+<footer id="footer">
+    Copyright (c) 2018 <a href="/" title="Homepage"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+</footer>
+<!-- End footer -->
+<!-- Beginning scripts -->
+<!-- Database helpers -->
+<script type="text/javascript" src="js/dbhelper.js"></script>
+<!-- Main javascript file -->
+<script type="text/javascript" src="js/restaurant_info.js"></script>
+<!-- Google Maps -->
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDz9jb0dWCRZg-4MhD9adsvD1uHKBb82_c&libraries=places&callback=initMap"></script>
+<!-- End scripts -->
 </body>
 
 </html>

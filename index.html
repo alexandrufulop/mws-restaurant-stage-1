@@ -20,10 +20,9 @@
 </head>
 <body>
 <header>
-    <nav>
-        <h1>
-            <a class="skip-main" href="#filterResults" title="Skip to main content">Skip to main content</a>
-            <a href="/">
+    <nav role="navigation">
+        <h1 role="heading">
+            <a href="/" title="Homepage">
                 <svg id="Logo" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
                      viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
                      <path style="fill:#55d4be;" d="M148.754,344.012H85.185c-11.702,0-21.19-9.487-21.19-21.19V149.194
@@ -79,19 +78,21 @@
         </h1>
     </nav>
 </header>
-<main id="maincontent" tabindex="-1">
-    <section id="map-container" tabindex="0" aria-label="Restaurants location's on the google map">
+<a class="skip-main" href="#FilterRestaurants" title="Skip to main content">Skip to main content</a>
+<main id="maincontent" tabindex="-1" role="main">
+    <section id="map-container" tabindex="-1" aria-hidden="true">
         <div id="map" role="application" tabindex="-1" aria-hidden="true"></div>
     </section>
-    <section>
-        <div id="filterResults" class="filter-options" role="listbox" tabindex="0" aria-label="Filter options">
-            <h2>Filter results:</h2>
+    <section role="region" id="FilterRestaurants">
+        <div id="filterResults" class="filter-options" role="listbox" tabindex="0"
+             aria-label="Filter restaurants by, neighborhood and cuisine">
+            <h2 aria-hidden="true">Filter results:</h2>
             <div class="select-container">
-                <select id="neighborhoods-select" title="Neighborhoods select" name="neighborhoods"
+                <select id="neighborhoods-select" title="Neighborhood" name="neighborhoods"
                         onchange="updateRestaurants()">
                     <option value="all">All Neighborhoods</option>
                 </select>
-                <select id="cuisines-select" name="cuisines" title="Cuisines select" onchange="updateRestaurants()">
+                <select id="cuisines-select" name="cuisines" title="Cuisine" onchange="updateRestaurants()">
                     <option value="all">All Cuisines</option>
                 </select>
             </div>
@@ -100,7 +101,7 @@
     </section>
 </main>
 <footer id="footer">
-    Copyright (c) 2018 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+    Copyright (c) 2018 <a href="/" title="Homepage"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
 </footer>
 <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
 <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
