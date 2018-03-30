@@ -5,21 +5,30 @@ var map;
  * Initialize Google map, called from HTML.
  */
 window.initMap = () => {
+    self.map = new google.maps.Map(document.getElementById('map'), {
+        title: 'A map with the location of the restaurants', //added google maps title a11y
+        zoom: 16,
+        center: restaurant.latlng,
+        scrollwheel: false
+    });
+};
+
+
+/**
+ * Fetch restaurant details
+ */
+document.addEventListener('DOMContentLoaded', (event) => {
+    /* Fetch restaurant details  */
     fetchRestaurantFromURL((error, restaurant) => {
         if (error) { // Got an error!
             console.error(error);
         } else {
-            self.map = new google.maps.Map(document.getElementById('map'), {
-                title: 'A map with the location of the restaurants', //added google maps title a11y
-                zoom: 16,
-                center: restaurant.latlng,
-                scrollwheel: false
-            });
             fillBreadcrumb();
             DBHelper.mapMarkerForRestaurant(self.restaurant, self.map);
         }
     });
-};
+});
+
 
 /**
  * Get current restaurant from page URL.
@@ -210,7 +219,7 @@ fillBreadcrumb = (restaurant = self.restaurant) => {
 
     /**
      * a11y
-     * Adding title to breadcrumb
+     * Adding title tobreadcrumb
      */
     li.setAttribute("title", restaurant.name);
 
@@ -232,3 +241,5 @@ getParameterByName = (name, url) => {
         return '';
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 };
+
+

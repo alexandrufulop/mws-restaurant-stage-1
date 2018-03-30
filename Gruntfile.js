@@ -20,7 +20,7 @@ module.exports = function(grunt) {
       ]
     },
     dist: {
-      src: 'css/src/*.css', //we pack all our css in one file
+      src: 'css/src/*.css', //we pack all our css except the - screen css in one file
 	  dest: 'css/styles.min.css'
     }
   },

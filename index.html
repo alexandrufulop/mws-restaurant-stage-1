@@ -4,15 +4,16 @@
     <meta charset="utf-8">
     <meta name="description" content="Restaurant Reviews - Stage 1"/>
     <meta name="author" content="Alexandru Fulop">
+    <link rel="manifest" href="/manifest.json">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
     <meta itemprop="name" content="Restaurant Reviews - Stage 1">
     <meta itemprop="image" content="/icon-min.png">
+    <meta http-equiv="Cache-control" content="public">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <meta name="mobile-web-app-capable" content="yes">
     <meta id="theme-color" name="theme-color" content="#3397DB">
     <!--//<link rel="stylesheet" href="css/styles.min.css"> todo change in production //-->
-    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
     <link rel="stylesheet" href="css/src/styles.css">
     <link rel="stylesheet" media="screen and (min-width: 360px)" href="css/medium-screen.css">
     <link rel="stylesheet" media="screen and (min-width: 800px)" href="css/large-screen.css">
@@ -81,7 +82,7 @@
 <a class="skip-main" href="#FilterRestaurants" title="Skip to main content">Skip to main content</a>
 <main id="maincontent" tabindex="-1" role="main">
     <section id="map-container" tabindex="-1" aria-hidden="true">
-        <div id="map" role="application" tabindex="-1" aria-hidden="true"></div>
+        <div id="map" role="application" tabindex="-1" aria-hidden="true"><span>Google map is not available offline</span></div>
     </section>
     <section role="region" id="FilterRestaurants">
         <div id="filterResults" class="filter-options" role="listbox" tabindex="0"
@@ -103,8 +104,8 @@
 <footer id="footer">
     Copyright (c) 2018 <a href="/" title="Homepage"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
 </footer>
-<script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
-<script type="application/javascript" charset="utf-8" src="js/main.js"></script>
+<script src="js/dbhelper.js"></script> <!-- Database helpers -->
+<script src="js/main.js"></script> <!-- Main script -->
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDz9jb0dWCRZg-4MhD9adsvD1uHKBb82_c&libraries=places&callback=initMap"></script>
 </body>

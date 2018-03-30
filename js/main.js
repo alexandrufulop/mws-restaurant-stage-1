@@ -8,8 +8,10 @@ var markers = [];
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
 document.addEventListener('DOMContentLoaded', (event) => {
+    DBHelper.registerSW(); //we register the service worker
     fetchNeighborhoods();
     fetchCuisines();
+    updateRestaurants(); //better like this ;)
 });
 
 /**
@@ -80,8 +82,6 @@ window.initMap = () => {
         center: loc,
         scrollwheel: false
     });
-
-    updateRestaurants();
 };
 
 /**
@@ -181,15 +181,15 @@ createRestaurantHTML = (restaurant) => {
         information regarding the selected restaurant (the name and the city).
         To overcome this we are using aria-hide on h1 and p elements
         */
-        name.setAttribute("aria-hidden","true");
-        neighborhood.setAttribute("aria-hidden","true");
+        name.setAttribute("aria-hidden", "true");
+        neighborhood.setAttribute("aria-hidden", "true");
     }
 
     /**
      * a11y
      * Making the Restaurant name audible and focusable
      */
-    li.setAttribute("tabindex","0");
+    li.setAttribute("tabindex", "0");
 
     /**
      * Appending elements to the page
@@ -210,9 +210,11 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     restaurants.forEach(restaurant => {
         // Add marker to the map
         const marker = DBHelper.mapMarkerForRestaurant(restaurant, self.map);
-        google.maps.event.addListener(marker, 'click', () => {
-            window.location.href = marker.url
-        });
-        self.markers.push(marker);
+        if (typeof google !== "undefined") {
+            google.maps.event.addListener(marker, 'click', () => {
+                window.location.href = marker.url
+            });
+            self.markers.push(marker);
+        }
     });
 };

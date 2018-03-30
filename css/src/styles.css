@@ -1,3 +1,12 @@
+/* raleway-regular - latin */
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Raleway'), local('Raleway-Regular'),
+    url('/fonts/raleway-v12-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('/fonts/raleway-v12-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 body,
 html {
     margin: 0;
@@ -179,9 +188,15 @@ nav h1 a {
 
 /* ====================== Map ====================== */
 #map {
-    height: 400px;
+    height: 300px;
     width: 100%;
-    background: #ccc
+    text-align: center;
+}
+
+#map span {
+    top: calc(50% - 70px);
+    position: relative;
+    font-size: 3em;
 }
 
 /* ====================== Restaurant Filtering ====================== */
@@ -439,3 +454,6 @@ nav h1 a {
     text-transform: uppercase;
 }
 
+#Offline {
+    padding: 1em;
+}

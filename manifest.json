@@ -1,0 +1,22 @@
+{
+  "short_name": "GGLnd",
+  "name": "Alexandru Fulop - Google Nano Degree - MWS - Stage 1",
+  "icons": [
+    {
+      "src": "icon.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "icon.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "index.html?launcher=true"
+}

@@ -4,6 +4,29 @@
 class DBHelper {
 
     /**
+     * Registering the Service Worker
+     */
+    static registerSW() {
+        //checking to see if the browser supports sw
+        if (!navigator.serviceWorker || !navigator.serviceWorker.register) {
+            console.log("This browser doesn't support service workers");
+            return;
+        }
+
+        //registering the sw
+        window.addEventListener('load', function () {
+            navigator.serviceWorker.register('/sw.js').then(function (registration) {
+                // Registration successful
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function (err) {
+                // registration failed
+                console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+
+    };
+
+    /**
      * Database URL.
      * Change this to restaurants.json file location on your server.
      */
@@ -173,15 +196,18 @@ class DBHelper {
      * Map marker for a restaurant.
      */
     static mapMarkerForRestaurant(restaurant, map) {
-        const marker = new google.maps.Marker({
-                position: restaurant.latlng,
-                title: restaurant.name,
-                url: DBHelper.urlForRestaurant(restaurant),
-                map: map,
-                animation: google.maps.Animation.DROP
-            }
-        );
-        return marker;
+        if (typeof google !== "undefined") {
+
+            const marker = new google.maps.Marker({
+                    position: restaurant.latlng,
+                    title: restaurant.name,
+                    url: DBHelper.urlForRestaurant(restaurant),
+                    map: map,
+                    animation: google.maps.Animation.DROP
+                }
+            );
+            return marker;
+        }
     }
 
 }
