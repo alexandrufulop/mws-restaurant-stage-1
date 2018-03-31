@@ -186,7 +186,7 @@ class DBHelper {
     static imageAltForRestaurant(restaurant) {
         if (restaurant.name !== undefined && restaurant.neighborhood !== undefined) {
             //Alt would sound like "Restaurant Name" in "Location"
-            return restaurant.name + ' in ' + restaurant.neighborhood;
+            return `Image of ${restaurant.name} restaurant`;
         }
         return null;
     }

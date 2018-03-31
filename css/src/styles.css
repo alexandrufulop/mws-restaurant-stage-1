@@ -134,13 +134,14 @@ a.skip-main:focus, a.skip-main:active {
 
 #Logo {
     display: none;
+    z-index: 1;
 }
 
 nav {
     position: relative;
     margin: 0;
     width: 100%;
-    min-height: 80px;
+    min-height: 85px;
 }
 
 nav h1 {
@@ -157,11 +158,13 @@ nav h1 a {
 }
 
 #breadcrumb {
-    line-height: 3em;
+    position: relative;
+    line-height: 2em;
     list-style: none;
     background: #eee;
     font-size: 1em;
-    margin: 0;
+    margin: 2em auto 0 0;
+    text-align: left;
 }
 
 /* Display list items side by side */
@@ -308,9 +311,6 @@ nav h1 a {
 
 /* ====================== Restaurant Details ====================== */
 
-.inside section {
-}
-
 .inside header {
 }
 
@@ -351,8 +351,10 @@ nav h1 a {
 }
 
 #restaurant-name,
-#reviews-container h2 {
-    color: #f18200;
+#reviews-container h2,
+#restaurants-list h3,
+.inside section h3 {
+    color: #111;
     font-size: 1.5em;
     text-align: center;
 }

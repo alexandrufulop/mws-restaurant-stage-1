@@ -152,7 +152,7 @@ createRestaurantHTML = (restaurant) => {
     //Adding dynamic alt text for each image
     const imageAlt = DBHelper.imageAltForRestaurant(restaurant);
 
-    const name = document.createElement('h1');
+    const name = document.createElement('h3');
     name.innerHTML = restaurant.name;
 
     const neighborhood = document.createElement('p');
@@ -160,7 +160,7 @@ createRestaurantHTML = (restaurant) => {
 
 
     const address = document.createElement('p');
-    address.innerHTML = restaurant.address;
+    address.innerHTML = `${restaurant.address}.`;
 
 
     const more = document.createElement('a');

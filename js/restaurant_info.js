@@ -131,7 +131,7 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
  */
 fillReviewsHTML = (reviews = self.restaurant.reviews) => {
     const container = document.getElementById('reviews-container');
-    const title = document.createElement('h2');
+    const title = document.createElement('h3');
     title.innerHTML = 'Reviews';
 
     /**
@@ -222,6 +222,16 @@ fillBreadcrumb = (restaurant = self.restaurant) => {
      * Adding title tobreadcrumb
      */
     li.setAttribute("title", restaurant.name);
+
+    /**
+     * a11y
+     * Breadcrumb
+     * https://www.w3.org/TR/2017/NOTE-wai-aria-practices-1.1-20171214/examples/breadcrumb/index.html
+     */
+    const curLink = document.createElement('a');
+    curLink.innerHTML = ('#');
+    curLink.setAttribute("aria-current", "page");
+    curLink.title = `${restaurant.name} restaurant`;
 
     breadcrumb.appendChild(li);
 };

@@ -22,8 +22,8 @@
 <!-- Beginning header -->
 <header>
     <!-- Beginning nav -->
-    <nav>
-        <h1>
+    <nav role="navigation">
+        <h1 role="heading">
             <a href="/" title="Homepage">
                 <svg id="Logo" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
                      viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
@@ -79,12 +79,12 @@
             </a>
         </h1>
         <a class="skip-main" href="#restaurant-container" title="Skip to main content">Skip to main content</a>
+        <!-- Beginning breadcrumb -->
+        <ul id="breadcrumb" aria-label="Breadcrumb">
+            <li><a href="/" title="Homepage">Home</a></li>
+        </ul>
+        <!-- End breadcrumb -->
     </nav>
-    <!-- Beginning breadcrumb -->
-    <ul id="breadcrumb" aria-label="Breadcrumb">
-        <li><a href="/" title="Homepage">Home</a></li>
-    </ul>
-    <!-- End breadcrumb -->
     <!-- End nav -->
 </header>
 <!-- End header -->
@@ -93,12 +93,13 @@
 <main id="maincontent" role="main">
     <!-- Beginning map -->
     <section id="map-container" tabindex="-1" aria-hidden="true">
-        <div id="map" role="application" tabindex="-1" aria-hidden="true"><span>Google map is not available offline</span></div>
+        <div id="map" role="application" tabindex="-1" aria-hidden="true">
+            <span>Google map is not available offline</span></div>
     </section>
     <!-- End map -->
     <!-- Beginning restaurant -->
     <section id="restaurant-container" role="region" aria-label="Restaurant details">
-        <h1 id="restaurant-name" aria-roledescription="Restaurant name"></h1>
+        <h2 id="restaurant-name" aria-roledescription="Restaurant name"></h2>
         <img role="img" id="restaurant-img">
         <p id="restaurant-cuisine" tabindex="0"></p>
         <p id="restaurant-address" tabindex="0"></p>
