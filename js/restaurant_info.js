@@ -72,15 +72,20 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
 
     address.innerHTML = restaurant.address;
 
-    const image = document.getElementById('restaurant-img');
-    image.className = 'restaurant-img';
-    image.src = DBHelper.imageUrlForRestaurant(restaurant);
+    /* Do we have a valid image url? */
+    let imageSrc = DBHelper.imageUrlForRestaurant(restaurant);
+    if(imageSrc){
+        const image = document.getElementById('restaurant-img');
+        image.src = imageSrc;
+        image.className = 'restaurant-img';
 
-    //Adding dynamic alt text for each image
-    const imageAlt = DBHelper.imageAltForRestaurant(restaurant);
-    if (imageAlt) {
-        image.alt = imageAlt;
+        //Adding dynamic alt text for each image
+        const imageAlt = DBHelper.imageAltForRestaurant(restaurant);
+        if (imageAlt) {
+            image.alt = imageAlt;
+        }
     }
+
 
     const cuisine = document.getElementById('restaurant-cuisine');
     /**

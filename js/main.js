@@ -145,12 +145,17 @@ createRestaurantHTML = (restaurant) => {
      */
     li.setAttribute("role", "listitem");
 
-    const image = document.createElement('img');
-    image.className = 'restaurant-img';
-    image.src = DBHelper.imageUrlForRestaurant(restaurant);
+    /* Do we have a valid image url? */
+    let imageSrc = DBHelper.imageUrlForRestaurant(restaurant);
+    if(imageSrc) {
+        const image = document.createElement('img');
+        image.className = 'restaurant-img';
+        image.src = imageSrc;
+        //Adding dynamic alt text for each image
+        image.alt = DBHelper.imageAltForRestaurant(restaurant);
 
-    //Adding dynamic alt text for each image
-    const imageAlt = DBHelper.imageAltForRestaurant(restaurant);
+        li.append(image); //we append the image to the element
+   }
 
     const name = document.createElement('h3');
     name.innerHTML = restaurant.name;
@@ -173,17 +178,13 @@ createRestaurantHTML = (restaurant) => {
      * if we have a description of the image we skip the restaurant name and city,
      * thus keeping only the address to be spoken by a screen reader
      */
-    if (imageAlt) {
-        image.alt = imageAlt;
-
-        /* !!! Important !!!
-        if we have an alt text set to the image, it means that a screen reader would repeat the same
-        information regarding the selected restaurant (the name and the city).
-        To overcome this we are using aria-hide on h1 and p elements
-        */
-        name.setAttribute("aria-hidden", "true");
-        neighborhood.setAttribute("aria-hidden", "true");
-    }
+    /* !!! Important !!!
+    if we have an alt text set to the image, it means that a screen reader would repeat the same
+    information regarding the selected restaurant (the name and the city).
+    To overcome this we are using aria-hide on h1 and p elements
+    */
+    name.setAttribute("aria-hidden", "true");
+    neighborhood.setAttribute("aria-hidden", "true");
 
     /**
      * a11y
@@ -194,7 +195,7 @@ createRestaurantHTML = (restaurant) => {
     /**
      * Appending elements to the page
      */
-    li.append(image);
+
     li.append(name);
     li.append(neighborhood);
     li.append(address);
