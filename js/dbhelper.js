@@ -1,6 +1,7 @@
 /**
  * Common database helper functions.
  */
+
 class DBHelper {
 
     /**
@@ -17,7 +18,7 @@ class DBHelper {
         window.addEventListener('load', function () {
             navigator.serviceWorker.register('/sw.js').then(function (registration) {
                 // Registration successful
-                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                //console.log('ServiceWorker registration successful with scope: ', registration.scope); //debug
             }, function (err) {
                 // registration failed
                 console.log('ServiceWorker registration failed: ', err);
@@ -38,8 +39,89 @@ class DBHelper {
     /**
      * Fetch all restaurants.
      */
+
     static fetchRestaurants(callback) {
-        let xhr = new XMLHttpRequest();
+
+        /* IndexDB */
+        let databaseName = 'data-v0';
+        let resturantOBJ = 'restaurants';
+
+        const dbPromise = idb.open(databaseName, 1, function(upgradeDb) {
+
+           // console.log('Opening the data object store.'); //debug
+
+            if (!upgradeDb.objectStoreNames.contains(resturantOBJ)) {
+                upgradeDb.createObjectStore(resturantOBJ,{
+                    keyPath: 'id'
+                });
+
+                //console.log('Creating a new data object store for restaurants JSON.'); //debug
+            }
+        }).catch(function(){
+            console.log('Info: Database not available');
+        });
+
+
+        /* Get stored objects */
+        dbPromise.then(db => {
+            return db.transaction(resturantOBJ)
+                .objectStore(resturantOBJ).getAll();
+        }).then(function(storedData) {
+
+            //if we have stored JSON data in the indexDB
+            if (storedData.length > 0) {
+
+               // console.log('We have stored data in our ibd', storedData);
+
+                callback(null, storedData); //we are returning the stored data from the idb
+            }
+        });
+
+        //there is no stored data so we retrieve it from the server
+        /* Getting the restaurants JSON from the development server using the FETCH API instead of XMLHttpRequest() */
+        fetch(DBHelper.DATABASE_URL)
+            .then(
+                function(response) {
+                    if (response.status !== 200) {
+                        console.log('Error: Looks like there was a problem. Status Code: ' +
+                            response.status);
+
+                        callback(response.status, null);
+                    }
+
+                    //This is the JSON response from the dev server
+                    response.json().then(function(data) {
+
+                     //console.log(data); //restaurants data from remote JSON //debug
+
+                        dbPromise.then(function(db) {
+                            let tx = db.transaction(resturantOBJ, 'readwrite');
+                            let keyValStore = tx.objectStore(resturantOBJ);
+
+                            data.forEach(function(restaurant){
+                                keyValStore.put(restaurant);
+                            });
+
+                            //return tx.complete;
+                        }).then(function() {
+                            //console.log('Success: JSON data added to indexDB!'); //debug
+                        }).catch(function(err){
+                            console.log('Error: could not add data to indexDB!'); //debug
+                        });
+
+                        callback(null, data); //returning the data => restaurants JSON
+
+                    });
+                }
+            )
+            .catch(function(err) {
+                console.log('Error: Fetch Error', err);
+
+                callback(err, null);
+            });
+
+
+        /*let xhr = new XMLHttpRequest();
         xhr.open('GET', DBHelper.DATABASE_URL);
         xhr.onload = () => {
             if (xhr.status === 200) { // Got a success response from server!
@@ -50,8 +132,9 @@ class DBHelper {
                 callback(error, null);
             }
         };
-        xhr.send();
+        xhr.send();*/
     }
+
 
     /**
      * Fetch a restaurant by its ID.
@@ -181,7 +264,7 @@ class DBHelper {
         }
 
         /* In case we do not have an image we could either return null or a dummy photo */
-        return 'https://dummyimage.com/776x582/ffffff/000000.jpg&text=No+photo';
+        return 'http://via.placeholder.com/776x582?text=No+Photo';
     }
 
     /**

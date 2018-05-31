@@ -19,5 +19,8 @@
     "grunt-responsive-images": "^1.10.1",
     "pixrem": "^4.0.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "browserslist": "^3.2.8",
+    "idb": "^2.1.2"
+  }
 }

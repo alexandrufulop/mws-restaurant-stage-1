@@ -20,15 +20,16 @@ let urlsToCache = [
     '/',
     '/favicon.ico',
     '/fonts/raleway-v12-latin-regular.woff2',
+    'http://via.placeholder.com/776x582?text=No+Photo',
     /* TODO  todo change in production */
     '/css/styles.min.css',
     '/css/src/styles.css', //fallback - if one does not run grunt
     '/css/large-screen.css',
     '/css/medium-screen.css',
-    '/js/dbhelper.js', //we can compress JS too with grunt - not for now...
+    //'/js/dbhelper.js', //we can compress JS too with grunt - not for now... //todo remove
     '/js/main.js',
     '/js/restaurant_info.js',
-    '/data/restaurants.json',
+    //'/data/restaurants.json', //switched to remote data from dev server
     '/restaurant.html' //for restaurant details ;)
 ];
 
@@ -38,7 +39,7 @@ self.addEventListener('install', function (event) {
         caches.open(cacheName).then(function (cache) {
             return cache.addAll(urlsToCache);
         }).catch(function () {
-            console.log('Failed to create the cache db.');
+            console.log('Info: No cache storage available!');
         })
     );
 });
@@ -62,7 +63,7 @@ self.addEventListener('fetch', function (event) {
                 */
                 let fetchRequest = event.request.clone(); //!!CLONE
 
-                //console.log(fetchRequest); //debug
+                // console.log(fetchRequest); //debug //todo mode = 'no-cors'; for dummy image
 
                 return fetch(fetchRequest).then(
                     function (response) {
